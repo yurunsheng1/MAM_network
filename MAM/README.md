@@ -1,39 +1,45 @@
-HLA-CNN and HLA-Vec
-=========================
-__Author__: ysvang@uci.edu
+The Keras implement of MAM.
 
-__Usage:__ python main.py config.ini 
+The Keras implement of In silico design of MHC class I high binding affinity peptides through motifs activation map.It is a framewrok of both the unknown MHC-I peptide prediction and novel peptide generation.  Our paper is still under reviewed.
 
-__Overview:__ HLA-CNN tool can be used to make binding prediction on HLA Class I peptides
-based on convolutional neural networks and a distributed representation of amino acids, HLA-Vec. 
-At a high level, the tool consists of (a) an unsupervised, distributed vector representation learner for
-raw peptide sequence, (b) a training mode to learn weights to the classifier, (c) an evaluation mode 
-to calculate Spearman's rank correlation coefficient (SRCC) and are under the receiver operating characteristic
-curve (AUC), (d) an inference mode to make prediction new peptides.
+Prerequisites:
+Python 3.5.3
+Tensorflow 1.4.0
+Scipy 0.19.1
+Numpy 1.13.3
+Pandas 0.20.3
+Sklearn 0.18.2
+Keras 2.1.3
+Gensim 3.2.0
 
-__Pipeline__: The pipeline is specified in the config.ini file. A config file is required to specify the 
-parameters used in the various learning algorithm as well as files and directories.
-- _HLA-Vec_: learns an unsupervised, distributed vector representation based on raw peptide sequence
-- _train_: The classifier is trained from a set of labeled data (reference Supplementary Information from doi:10.1038/srep32115)
-- _evaluate_: Using a labeled test set, the trained models are evaluated in terms of SRCC and AUC.
-- _inference_: Given a set of new peptides, predictions are inferred and scores are written out to a result file.
+Getting Started:
+The pipeline is as follows:
+1. Amino Acid to Vector: Convert the Amino Acid into n-dimemsion vector.
+1) Find config.ini and Set  Vec == True   
+2) Run python main.py config.ini
 
-__Notes:__
-- Test files are obtained from and currently in the format given by IEDB. http://tools.iedb.org/auto_bench/mhci/weekly/
-- Although all columns in the test files are not required, the minimum ones required by the code are Allele, Measurement_type, Peptide_seq,
-and Measurement_value (not required if performing inference mode).
- 
-__License:__ This project is licensed under the MIT License - see the LICENSE.md file for details.
- 
-__Requirements__:
-- Python 2.7.13
-- numpy 1.11.3
-- pandas 0.19.2
-- scipy 0.18.1
-- scikit_learn 0.18.1
-- gensim 2.3.0
-- keras 2.0.6
-- theano 0.9.0
+2. Train model.
+1) Find config.ini and Set  train == True  
+2) Run python main.py config.ini
 
-__Reference__:
-Vang, Y. S. and Xie, X. (2017) HLA class I binding prediction via convolutional neural networks. https://doi.org/10.1093/bioinformatics/btx264
+3. Evaluate model. Do the prediction on  the test dataset.
+1) Find config.ini and Set  evaluate == True  
+2) Run python main.py config.ini
+
+4. Inference model. Do the prediction on  the test dataset as well as generation.
+1) Find config.ini and Set  Inference == True  
+2) Run python main.py config.ini
+
+5. Fine-tuning. The setting of train, evaluate and inference model are the same operation as we mentioned above.
+
+
+Dataset
+The training dataset is available in train_data file while the test dataset is in  test_data file. 
+Moreover, the label name in drawing function (e.g., heatmap, tsne) need to be rewritten by the user.  
+
+Acknowledge: 
+Some of the code function refer from HLA-CNN https://github.com/uci-cbcl/HLA-bind.
+We appreciate so much for their excellent code. 	
+
+
+If you have any question you can email runshengyu@gmail.com for help.
