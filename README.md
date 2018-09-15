@@ -18,18 +18,22 @@ Prerequisites:
 Getting Started:
 The pipeline is as follows:
 1. Amino Acid to Vector: Convert the Amino Acid into n-dimemsion vector.
+
   I Find config.ini and Set  Vec == True   
   II Run python main.py config.ini
 
 2. Train model.
+
   I Find config.ini and Set  train == True  
   II Run python main.py config.ini
 
 3. Evaluate model. Do the prediction on  the test dataset.
+
   I Find config.ini and Set  evaluate == True  
   II Run python main.py config.ini
 
 4. Inference model. Do the prediction on  the test dataset as well as generation.
+
   I Find config.ini and Set  Inference == True  
   II Run python main.py config.ini
 
