@@ -3,6 +3,7 @@ The Keras implement of MAM.
 
 The Keras implement of In silico design of MHC class I high binding affinity peptides through motifs activation map.It is a framewrok of both the unknown MHC-I peptide prediction and novel peptide generation.  Our paper is still under reviewed.
 
+
 Prerequisites:
 Python 3.5.3
 Tensorflow 1.4.0
@@ -12,6 +13,7 @@ Pandas 0.20.3
 Sklearn 0.18.2
 Keras 2.1.3
 Gensim 3.2.0
+
 
 Getting Started:
 The pipeline is as follows:
