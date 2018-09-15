@@ -18,20 +18,20 @@ Gensim 3.2.0
 Getting Started:
 The pipeline is as follows:
 1. Amino Acid to Vector: Convert the Amino Acid into n-dimemsion vector.
-1) Find config.ini and Set  Vec == True   
-2) Run python main.py config.ini
+I Find config.ini and Set  Vec == True   
+II Run python main.py config.ini
 
 2. Train model.
-1) Find config.ini and Set  train == True  
-2) Run python main.py config.ini
+I Find config.ini and Set  train == True  
+II Run python main.py config.ini
 
 3. Evaluate model. Do the prediction on  the test dataset.
-1) Find config.ini and Set  evaluate == True  
-2) Run python main.py config.ini
+I Find config.ini and Set  evaluate == True  
+II Run python main.py config.ini
 
 4. Inference model. Do the prediction on  the test dataset as well as generation.
-1) Find config.ini and Set  Inference == True  
-2) Run python main.py config.ini
+I Find config.ini and Set  Inference == True  
+II Run python main.py config.ini
 
 5. Fine-tuning. The setting of train, evaluate and inference model are the same operation as we mentioned above.
 
