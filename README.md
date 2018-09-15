@@ -5,14 +5,14 @@ The Keras implement of In silico design of MHC class I high binding affinity pep
 
 
 Prerequisites:
-Python 3.5.3
-Tensorflow 1.4.0
-Scipy 0.19.1
-Numpy 1.13.3
-Pandas 0.20.3
-Sklearn 0.18.2
-Keras 2.1.3
-Gensim 3.2.0
+  Python 3.5.3
+  Tensorflow 1.4.0
+  Scipy 0.19.1
+  Numpy 1.13.3
+  Pandas 0.20.3
+  Sklearn 0.18.2
+  Keras 2.1.3
+  Gensim 3.2.0
 
 
 Getting Started:
